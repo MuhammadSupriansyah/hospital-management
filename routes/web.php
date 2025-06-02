@@ -55,9 +55,46 @@ Route::middleware('auth')->group(function(){
 
 
 Route::get('/landingPage', [CarouselController::class, 'index'])->name('landingPage');
-Route::get('/mitraKami', [MitraController::class, 'getAllData'])->name('mitraKami');
+Route::get('/profil', [MitraController::class, 'getAllData'])->name('mitraKami');
 Route::get('/panduan', [PanduanController::class, 'index'])->name('panduan');
 Route::get('/tentangObat', [ObatController::class, 'tentang'])->name('tentangObat');
+
+
+
+
+Route::get('/', function () {
+    return view('main.landingPage');
+});
+
+Route::get('/landingPage', function () {
+    return view('main.landingPage');
+});
+
+Route::get('/visi-misi', function () {
+    return view('main.visi-misi');
+})->name('visi-misi');
+
+Route::get('/profil-sekolah', function () {
+    return view('main.profil-sekolah');
+})->name('profil-sekolah');
+
+Route::get('/ekstrakurikuler', function () {
+    return view('main.ekstrakurikuler');
+})->name('ekstrakurikuler');
+
+Route::get('/kurikulumdanbiaya', function () {
+    return view('main.kurikulumdanbiaya');
+})->name('kurikulumdanbiaya');
+
+Route::get('/beranda', function () {
+    return view('main.beranda');
+})->name('beranda');
+
+Route::get('/pendaftaran', function () {
+    return view('main.pendaftaran');
+})->name('pendaftaran');
+
+
 
 
 
