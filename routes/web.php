@@ -90,9 +90,43 @@ Route::get('/beranda', function () {
     return view('main.beranda');
 })->name('beranda');
 
+Route::get('/selayang-pandang', function () {
+    return view('main.selayang-pandang');
+})->name('selayang-pandang');
+
+Route::get('/pendidik', function () {
+    return view('main.pendidik');
+})->name('pendidik');
+
+Route::get('/fasilitas', function () {
+    return view('main.fasilitas');
+})->name('fasilitas');
+
+Route::get('/struktur', function () {
+    return view('main.struktur');
+})->name('struktur');
+
+Route::get('/prestasi-guru', function () {
+    return view('main.prestasi-guru');
+})->name('prestasi-guru');
+
+Route::get('/prestasi-siswa', function () {
+    return view('main.prestasi-siswa');
+})->name('prestasi-siswa');
+
 Route::get('/pendaftaran', function () {
     return view('main.pendaftaran');
 })->name('pendaftaran');
+
+Route::get('/daftar', function () {
+    return view('main.daftar');
+})->name('daftar');
+
+
+
+
+
+
 
 
 

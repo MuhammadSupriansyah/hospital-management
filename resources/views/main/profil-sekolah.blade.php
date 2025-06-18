@@ -355,13 +355,11 @@
 
 </head>
 <body onload="AOS.init();">
-
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="img/Logo Kemen1.png" alt="Logo Sekolah" />
-      <span>SDIT AL IKHSAN</span>
+      <img src="img/logosd.png" alt="Logo Sekolah" />
+      <span>SDIT AL IHSAN</span>
     </a>
     <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
       <span class="navbar-toggler-icon"></span>
@@ -371,20 +369,38 @@
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            Tentang Sekolah
+            Profil
           </a>
           <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="{{ route('selayang-pandang') }}">Selayang Pandang</a></li>
             <li><a class="dropdown-item" href="{{ route('visi-misi') }}">Visi dan Misi</a></li>
-            <li><a class="dropdown-item" href="{{ route('profil-sekolah') }}">Profil Sekolah</a></li>
-            <li><a class="dropdown-item" href="{{ route('ekstrakurikuler') }}">Ekstrakurikuler</a></li>
-            <li><a class="dropdown-item" href="{{ route('kurikulumdanbiaya') }}">Kurikulum & Biaya</a></li>
+            <li><a class="dropdown-item" href="{{ route('struktur') }}">Struktur Organisai</a></li>
+            <li><a class="dropdown-item" href="{{ route('pendidik') }}">Pendidik & Tenaga Kependidikan</a></li>
+            <li><a class="dropdown-item" href="{{ route('fasilitas') }}">Fasilitas & Sarana</a></li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Kegiatan & Prestasi
+          </a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="{{ route('ekstrakurikuler') }}">Ekstrakurikuler</a></li>
+            <li><a class="dropdown-item" href="{{ route('prestasi-guru') }}">Prestasi Guru</a></li>
+            <li><a class="dropdown-item" href="{{ route('prestasi-siswa') }}">Prestasi Siswa</a></li>
+          </ul>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            PPDB
+          </a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="{{ route('pendaftaran') }}">Pendaftaran</a></li>
+          <li><a class="dropdown-item" href="{{ route('kurikulumdanbiaya') }}">Kurikulum & Biaya</a></li>
+          </ul>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('pendaftaran') }}">Pendaftaran</a>
+          <a class="nav-link" href="{{ route('daftar') }}">Daftar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('beranda') }}">Beranda</a>
+          <a class="nav-link" href="{{ route('beranda') }}">Home</a>
         </li>
       </ul>
     </div>
@@ -500,8 +516,11 @@
 </section>
 
 <!-- Footer -->
-<footer>
-  <p>&copy; 2025 SDIT AL IKHSAN. All Rights Reserved.</p>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 <strong>SDIT AL IKHSAN</strong>. All Rights Reserved.</p>
+    <p>Developed with ❤️ by Tim IT SDIT AL IKHSAN</p>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
