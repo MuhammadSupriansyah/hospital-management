@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   
@@ -66,6 +68,17 @@ nav {
 
 .btn-success:hover {
   background-color: #8bbf1d;
+}
+
+.btn-pink {
+  background-color: #f28ab2; /* merah muda */
+  color: white;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #e6719d;
+  color: white;
 }
 .banner {
   background: 
@@ -157,7 +170,6 @@ nav {
   </marquee>
 </div>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg shadow-sm">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center gap-2 ps-3" href="#">
@@ -179,7 +191,7 @@ nav {
             Profil
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ route('selayang-pandang') }}">Selayang Pandang</a></li>
+            <li><a class="dropdown-item" href="{{ route('selayang-pandang') }}">Profil Sekolah</a></li>
             <li><a class="dropdown-item" href="{{ route('visi-misi') }}">Visi dan Misi</a></li>
             <li><a class="dropdown-item" href="{{ route('struktur') }}">Struktur Organisasi</a></li>
             <li><a class="dropdown-item" href="{{ route('pendidik') }}">Pendidik & Tenaga Kependidikan</a></li>
@@ -212,9 +224,12 @@ nav {
           <a class="nav-link" href="{{ route('beranda') }}">Home</a>
         </li>
 
-        <!-- Tombol Daftar -->
         <li class="nav-item">
           <a href="{{ route('daftar') }}" class="btn btn-success ms-2 rounded-pill px-4 py-1" style="font-weight: bold;">Daftar</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-pink ms-2 rounded-pill px-4 py-1 fw-bold" href="{{ route('login') }}">Login</a>
         </li>
       </ul>
     </div>
@@ -231,6 +246,36 @@ nav {
 </body>
 </html>
 
+<section class="container my-5" data-aos="fade-up">
+  <h2 class="text-center mb-4 fw-bold">Tata Cara Pendaftaran</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-5 mb-4">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <h5 class="fw-bold text-success"><i class="bi bi-globe2 me-2"></i>Pendaftaran Online</h5>
+        <ol class="mt-3 ps-3">
+          <li>Kunjungi website resmi kami di <strong>sditalihsan.sch.id</strong></li>
+          <li>Klik menu <strong>PPDB > Pendaftaran</strong></li>
+          <li>Isi formulir pendaftaran dengan lengkap dan benar</li>
+          <li>Unggah dokumen yang diminta</li>
+          <li>Klik tombol <strong>Submit</strong> untuk mengirimkan</li>
+          <li>Panitia akan menghubungi Anda untuk verifikasi dan proses selanjutnya</li>
+        </ol>
+      </div>
+    </div>
+    <div class="col-md-5 mb-4">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <h5 class="fw-bold text-primary"><i class="bi bi-person-lines-fill me-2"></i>Pendaftaran Offline</h5>
+        <ol class="mt-3 ps-3">
+          <li>Datang langsung ke lokasi SDIT AL-IKHSAN</li>
+          <li>Mengisi formulir pendaftaran secara manual</li>
+          <li>Menyerahkan fotokopi dokumen yang dibutuhkan</li>
+          <li>Mengikuti wawancara dan observasi calon siswa</li>
+          <li>Menerima hasil seleksi melalui pengumuman langsung atau via WhatsApp</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

@@ -122,6 +122,10 @@ Route::get('/daftar', function () {
     return view('main.daftar');
 })->name('daftar');
 
+Route::get('/login', function () {
+    return view('main.login');
+})->name('login');
+
 
 
 

@@ -61,6 +61,18 @@ nav {
   background-color: #8bbf1d;
 }
 
+.btn-pink {
+  background-color: #f28ab2; /* merah muda */
+  color: white;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #e6719d;
+  color: white;
+}
+
+
     .section-title {
       background-color: #ffc107;
       display: inline-block;
@@ -208,7 +220,6 @@ nav {
   </marquee>
 </div>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg shadow-sm">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center gap-2 ps-3" href="#">
@@ -230,7 +241,7 @@ nav {
             Profil
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ route('selayang-pandang') }}">Selayang Pandang</a></li>
+            <li><a class="dropdown-item" href="{{ route('selayang-pandang') }}">Profil Sekolah</a></li>
             <li><a class="dropdown-item" href="{{ route('visi-misi') }}">Visi dan Misi</a></li>
             <li><a class="dropdown-item" href="{{ route('struktur') }}">Struktur Organisasi</a></li>
             <li><a class="dropdown-item" href="{{ route('pendidik') }}">Pendidik & Tenaga Kependidikan</a></li>
@@ -263,14 +274,18 @@ nav {
           <a class="nav-link" href="{{ route('beranda') }}">Home</a>
         </li>
 
-        <!-- Tombol Daftar -->
         <li class="nav-item">
           <a href="{{ route('daftar') }}" class="btn btn-success ms-2 rounded-pill px-4 py-1" style="font-weight: bold;">Daftar</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-pink ms-2 rounded-pill px-4 py-1 fw-bold" href="{{ route('login') }}">Login</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <!-- Header Judul Ekstrakurikuler -->
 <section class="hero">
@@ -438,17 +453,24 @@ nav {
 
 <section class="section">
   <div class="container">
-    <h3 class="section-title text-center mb-4">Galeri Kegiatan Siswa</h3>
+    <h3 class="section-title text-center mb-4">Galeri Ekstrakurikuler</h3>
     <div class="row justify-content-center text-center g-3">
+
       <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
         <img src="img/robotik.png" class="img-fluid" style="width: 100px; height: auto;" alt="Robotik">
+        <p class="mt-2 fw-semibold">Robotik</p>
       </div>
-      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
         <img src="img/tahfidz.png" class="img-fluid" style="width: 100px; height: auto;" alt="Tahfidz">
+        <p class="mt-2 fw-semibold">Tahfidz</p>
       </div>
-      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
         <img src="img/bahasaarab.png" class="img-fluid" style="width: 100px; height: auto;" alt="Bahasa Arab">
+        <p class="mt-2 fw-semibold">Bahasa Arab</p>
       </div>
+
     </div>
   </div>
 </section>
@@ -458,15 +480,22 @@ nav {
   <div class="container">
     <h3 class="section-title text-center mb-4">Galeri Pembimbing Ekstrakurikuler</h3>
     <div class="row justify-content-center text-center g-3">
+
       <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
         <img src="img/robotik.png" class="img-fluid" style="width: 100px; height: auto;" alt="Robotik">
+        <p class="mt-2 fw-semibold">Bapak Ahmad - Robotik</p>
       </div>
-      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
         <img src="img/tahfidz.png" class="img-fluid" style="width: 100px; height: auto;" alt="Tahfidz">
+        <p class="mt-2 fw-semibold">Ustadzah Siti - Tahfidz</p>
       </div>
-      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
         <img src="img/bahasaarab.png" class="img-fluid" style="width: 100px; height: auto;" alt="Bahasa Arab">
+        <p class="mt-2 fw-semibold">Ustadz Ali - Bahasa Arab</p>
       </div>
+
     </div>
   </div>
 </section>

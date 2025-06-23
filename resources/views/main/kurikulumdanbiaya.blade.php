@@ -60,6 +60,17 @@ nav {
   background-color: #8bbf1d;
 }
 
+.btn-pink {
+  background-color: #f28ab2; /* merah muda */
+  color: white;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #e6719d;
+  color: white;
+}
+
 .hero {
   background: 
     linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
@@ -157,6 +168,31 @@ nav {
   0%   { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
 }
+
+.table tbody tr {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInRow 0.5s ease-in-out forwards;
+    }
+
+    .table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+    .table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+    .table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+    .table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+    .table tbody tr:nth-child(5) { animation-delay: 0.5s; }
+    .table tbody tr:nth-child(6) { animation-delay: 0.6s; }
+    .table tbody tr:nth-child(7) { animation-delay: 0.7s; }
+    .table tbody tr:nth-child(8) { animation-delay: 0.8s; }
+    .table tbody tr:nth-child(9) { animation-delay: 0.9s; }
+    .table tbody tr:nth-child(10) { animation-delay: 1s; }
+    .table tbody tr:nth-child(11) { animation-delay: 1.1s; }
+
+    @keyframes fadeInRow {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body onload="AOS.init();">
@@ -167,7 +203,6 @@ nav {
   </marquee>
 </div>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg shadow-sm">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center gap-2 ps-3" href="#">
@@ -189,7 +224,7 @@ nav {
             Profil
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ route('selayang-pandang') }}">Selayang Pandang</a></li>
+            <li><a class="dropdown-item" href="{{ route('selayang-pandang') }}">Profil Sekolah</a></li>
             <li><a class="dropdown-item" href="{{ route('visi-misi') }}">Visi dan Misi</a></li>
             <li><a class="dropdown-item" href="{{ route('struktur') }}">Struktur Organisasi</a></li>
             <li><a class="dropdown-item" href="{{ route('pendidik') }}">Pendidik & Tenaga Kependidikan</a></li>
@@ -222,14 +257,18 @@ nav {
           <a class="nav-link" href="{{ route('beranda') }}">Home</a>
         </li>
 
-        <!-- Tombol Daftar -->
         <li class="nav-item">
           <a href="{{ route('daftar') }}" class="btn btn-success ms-2 rounded-pill px-4 py-1" style="font-weight: bold;">Daftar</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-pink ms-2 rounded-pill px-4 py-1 fw-bold" href="{{ route('login') }}">Login</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 
 <!-- Hero Section -->
@@ -278,6 +317,106 @@ nav {
     </div>
   </div>
 </section>
+
+<!-- Jadwal Mingguan Disusun Horizontal -->
+<div class="mt-4">
+  <div class="section-title">JADWAL MATA PELAJARAN</div>
+  <div class="table-responsive">
+    <table class="table table-bordered text-center align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>Waktu</th>
+          <th>Senin</th>
+          <th>Selasa</th>
+          <th>Rabu</th>
+          <th>Kamis</th>
+          <th>Jumat</th>
+        </tr>
+      </thead>
+   <!-- ...sebelumnya tetap... -->
+<tbody>
+  <tr>
+    <td>08.00 - 08.45</td>
+    <td>Upacara Bendera</td>
+    <td>Tahfidz Qur'an</td>
+    <td>Tahfidz Qur'an</td>
+    <td>Tahfidz Qur'an</td>
+    <td>Tahfidz & Doa</td>
+  </tr>
+  <tr>
+    <td>08.45 - 09.30</td>
+    <td>Tahfidz Qur'an</td>
+    <td>Pancasila</td>
+    <td>IPA</td>
+    <td>Bahasa Indonesia</td>
+    <td>Pendidikan Agama</td>
+  </tr>
+  <tr>
+    <td>09.30 - 10.15</td>
+    <td>Bahasa Indonesia</td>
+    <td>Matematika</td>
+    <td>Matematika</td>
+    <td>Matematika</td>
+    <td>Bahasa Indonesia</td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff3cd; font-weight: bold;">10.15 - 10.30</td>
+    <td colspan="5" style="background-color: #fff3cd; font-weight: bold;">Istirahat</td>
+  </tr>
+  <tr>
+    <td>10.30 - 11.15</td>
+    <td>Matematika</td>
+    <td>Bahasa Indonesia</td>
+    <td>Bahasa Indonesia</td>
+    <td>PJOK</td>
+    <td>Tematik (P5)</td>
+  </tr>
+  <tr>
+    <td>11.15 - 12.00</td>
+    <td>Bahasa Arab</td>
+    <td>Bahasa Arab</td>
+    <td>STEAM</td>
+    <td>Tematik (P5)</td>
+    <td>Sholat Jumat</td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff3cd; font-weight: bold;">12.00 - 13.15</td>
+    <td colspan="5" style="background-color: #fff3cd; font-weight: bold;">Sholat Dzuhur & Istirahat</td>
+  </tr>
+  <tr>
+    <td>13.15 - 14.00</td>
+    <td>IPA</td>
+    <td>Seni Budaya</td>
+    <td>P5</td>
+    <td>Seni Musik</td>
+    <td>Keputrian / Kajian</td>
+  </tr>
+  <tr>
+    <td>14.00 - 14.45</td>
+    <td>Bahasa Inggris</td>
+    <td>P5</td>
+    <td>Bahasa Arab</td>
+    <td>Bahasa Arab</td>
+    <td>Refleksi</td>
+  </tr>
+  <tr>
+    <td>14.45 - 15.30</td>
+    <td>P5</td>
+    <td>Bahasa Inggris</td>
+    <td>Bahasa Inggris</td>
+    <td>Bahasa Inggris</td>
+    <td>Literasi</td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff3cd; font-weight: bold;">15.30 - 16.00</td>
+    <td colspan="5" style="background-color: #fff3cd; font-weight: bold;">Sholat Ashar & Persiapan Pulang</td>
+  </tr>
+</tbody>
+<!-- ...lanjutan tetap... -->
+
+    </table>
+  </div>
+</div>
 
 
 

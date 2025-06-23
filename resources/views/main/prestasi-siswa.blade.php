@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EKSTRAKURIKULER</title>
+  <title>PRESTASI SISWA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -60,6 +60,18 @@ nav {
 .btn-success:hover {
   background-color: #8bbf1d;
 }
+
+.btn-pink {
+  background-color: #f28ab2; /* merah muda */
+  color: white;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #e6719d;
+  color: white;
+}
+
 
     .section-title {
       background-color: #ffc107;
@@ -219,7 +231,6 @@ nav {
   </marquee>
 </div>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg shadow-sm">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center gap-2 ps-3" href="#">
@@ -241,7 +252,7 @@ nav {
             Profil
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ route('selayang-pandang') }}">Selayang Pandang</a></li>
+            <li><a class="dropdown-item" href="{{ route('selayang-pandang') }}">Profil Sekolah</a></li>
             <li><a class="dropdown-item" href="{{ route('visi-misi') }}">Visi dan Misi</a></li>
             <li><a class="dropdown-item" href="{{ route('struktur') }}">Struktur Organisasi</a></li>
             <li><a class="dropdown-item" href="{{ route('pendidik') }}">Pendidik & Tenaga Kependidikan</a></li>
@@ -274,14 +285,18 @@ nav {
           <a class="nav-link" href="{{ route('beranda') }}">Home</a>
         </li>
 
-        <!-- Tombol Daftar -->
         <li class="nav-item">
           <a href="{{ route('daftar') }}" class="btn btn-success ms-2 rounded-pill px-4 py-1" style="font-weight: bold;">Daftar</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-pink ms-2 rounded-pill px-4 py-1 fw-bold" href="{{ route('login') }}">Login</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <!-- Header Judul Ekstrakurikuler -->
 <section class="hero">
