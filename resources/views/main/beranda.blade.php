@@ -361,9 +361,10 @@ AOS.init({
 </div>
 
 <!-- Contoh WhatsApp -->
-<a href="https://wa.me/6281351750693?text=Halo%20saya%20ingin%20bertanya%20tentang%20pendaftaran" target="_blank" class="wa-float">
-  <img src="img/whatsapp.png" alt="WhatsApp" width="60" height="60" />
+<a href="https://wa.me/6281351750693?text=Halo%20saya%20tertarik%20dengan%20produk%20Anda" target="_blank">
+  Hubungi Kami
 </a>
+
 
 
 
